@@ -106,21 +106,26 @@
                 </div>
             </div>
             <div class="row">
+
+                @foreach ($product as $p)
                 <div class="col-md-4 col-sm-6">
                     <div class="single-food">
                         <div class="food-img">
-                            <img src="{{ asset('frontend/assets/images/food1.jpg')}}" class="img-fluid" alt="">
+                            <img src="{{ asset('backend/upload/resize/'.$p->image)}}" class="img-fluid" alt="">
                         </div>
                         <div class="food-content">
                             <div class="d-flex justify-content-between">
-                                <h5>ข้าวหน้าปลาแกะ</h5>
-                                <span class="style-change">35 ฿</span>
+                                <h5>{{$p->name}}</h5>
+                                <span class="style-change">{{$p->price}}</span>
                             </div>
-                            <p class="pt-3">ส่วนผสมหลักคือ ปลาไร้ก้างเนื่องจากถูกแกะออกแล้ว และกลายเป็นชื่อเมนู</p>
+                            <p class="pt-3">{{$p->description}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+
+                @endforeach
+
+                <!-- <div class="col-md-4 col-sm-6">
                     <div class="single-food mt-5 mt-sm-0">
                         <div class="food-img">
                             <img src="{{ asset('frontend/assets/images/food2.jpg')}}" class="img-fluid" alt="">
@@ -189,7 +194,8 @@
                             <p class="pt-3">หมาล่ารสชาติเข้มข่นหอมกลิ่นหมาล่า เนื้อนุ่มอร่อย</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
             </div>
         </div>
         <br>

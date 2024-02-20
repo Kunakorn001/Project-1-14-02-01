@@ -18,7 +18,8 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $product = Product::all();
+    return view('welcome',compact('product'));
 });
 
 Route::get('/dashboard', function () {
