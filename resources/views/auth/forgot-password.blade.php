@@ -35,6 +35,7 @@
 					<span class="login100-form-title">
 						Plese Enter Your Email Addess to reset password
 					</span>
+					<x-auth-session-status class="mb-4 text-success"  :status="session('status')" />
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                     
@@ -42,9 +43,12 @@
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
-                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                            
 						</span>
 					</div>
+				
+					<x-input-error :messages="$errors->get('email')" class="mt-2 text-danger" />
+					
                     <!-- <div class="flex items-center justify-end mt-4">
             <x-primary-button>
                 {{ __('Email Password Reset Link') }}

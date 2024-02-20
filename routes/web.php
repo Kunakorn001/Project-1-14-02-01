@@ -1,7 +1,10 @@
 <?php
-
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
+use App\Models\User;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +22,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $pd=Product::all();
+    $pdr=User::all();
+    return view('dashboard',compact('pd','pdr'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -29,3 +34,11 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+// เมนู Product
+Route::get('admin/product/index',[ProductController::class,'index'])->name('p.index');
+Route::get('admin/product/create',[ProductController::class,'create']);
+Route::post('admin/product/insert',[ProductController::class,'insert']);
+Route::get('admin/product/delete/{id}',[ProductController::class, 'delete']);
+Route::get('admin/product/edit/{id}',[ProductController::class, 'edit']);
+Route::post('admin/product/update/{id}',[ProductController::class, 'update']);

@@ -79,7 +79,7 @@ return [
     |
     | The application locale determines the default locale that will be used
     | by the translation service provider. You are free to set this value
-    | to any of the locales which will be supported by the application.
+    | to any of the locales which will be supported by the application. 
     |
     */
 
@@ -156,10 +156,11 @@ return [
     */
 
     'providers' => ServiceProvider::defaultProviders()->merge([
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         /*
          * Package Service Providers...
          */
-
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -183,6 +184,9 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+
+        'Image' => Intervention\Image\Facades\Image::class,
     ])->toArray(),
 
 ];
