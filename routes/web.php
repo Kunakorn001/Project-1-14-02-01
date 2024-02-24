@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\User;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +22,19 @@ Route::get('/', function () {
     $product = Product::all();
     return view('welcome',compact('product'));
 });
+// Route::get('/welcome',function (){
+//     return View('welcome');
+// });
+Route::get('/about',function (){
+    return View('about');
+});
+Route::get('/menu',function (){
+    return View('menu');
+});
+Route::get('/contact',function (){
+    return View('contact');
+});
+
 
 Route::get('/dashboard', function () {
     $pd=Product::all();

@@ -101,7 +101,7 @@ class ProductController extends Controller
             $request->file('image')->move(
                 public_path().'/backend/upload/',$filename);
             Image::make(public_path().'/backend/upload/'
-            .$filename)->resize(250,250)->save(public_path().
+            .$filename)->resize(500,500)->save(public_path().
             '/backend/upload/resize/'.$filename);
             $product->image = $filename;
         }

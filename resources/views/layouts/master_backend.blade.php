@@ -60,7 +60,8 @@
                         <img src="{{asset('backend/assets/img/logoicon.png')}}" alt="">
                         </span>
                         <span class="app-brand-text demo menu-text fw-bolder ms-2">
-                            IT Shop
+                            SnackStation <br>
+                            By bangon
                         </span>
                     </a>
 
@@ -121,7 +122,7 @@
 
                     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
                      
-                        Admin IT-Shop 
+                        Admin SnackStation By Bangon 
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
                             <!-- Place this tag where you want the button to render. -->
     

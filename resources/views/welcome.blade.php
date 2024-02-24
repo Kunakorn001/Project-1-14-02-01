@@ -19,7 +19,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl-carousel.min.css')}}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/jquery.datetimepicker.min.css')}}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css')}}">
+    
 </head>
+
 <body>
     <!-- Preloader Starts -->
     <div class="preloader">
@@ -44,12 +46,13 @@
                     </div>  
                     <div class="main-menu">
                         <ul>
-                            <li class="active"><a href="index.html">home</a></li>
-                            <li><a href="about.html">about</a></li>
-                            <li><a href="menu.html">menu</a></li>
-                            <li><a href="contact-us.html">contact</a></li>
+                            <li class="active"><a href="/">home</a></li>
+                            <li><a href="about">about</a></li>
+                            <li><a href="menu">menu</a></li>
+                            <li><a href="contact">contact</a></li>
                             <li><a href="{{route('login') }}">Login</a></li>
                             <li><a href="{{route('register')}}">Register</a></li>
+                            
                         </ul>
                     </div>
                 </div>
